@@ -10,7 +10,9 @@ export default function SliderDishes () {
     const buttonLeft = document.getElementsByClassName('ribbon__arrow_left')[0]
     const buttonRight = document.getElementsByClassName('ribbon__arrow_right')[0]
 
-    const { filterBySalads, 
+    const {
+        getAllDishes, 
+        filterBySalads, 
         filterBySoups, 
         filterByChiken, 
         filterByBeef, 
@@ -36,34 +38,43 @@ export default function SliderDishes () {
       ? buttonRight.classList.add("ribbon__arrow_visible")
       : buttonLeft.classList.remove("ribbon__arrow_visible")
     };
+
+    const links = document.querySelectorAll(".ribbon__item")
+
+    const getActiveClass = (e) => {
+        links.forEach(link => {
+            link.classList.remove("ribbon__item_active")
+        })
+        e.target.classList.add("ribbon__item_active")
+    }
   
     return (
         <div className="ribbon">
             <nav className="ribbon__inner">
                 <Swiper ref={ref}>
                     <div>
-                        <a href="/" className="ribbon__item ribbon__item_active">All</a>
-                        <a href="/" className="ribbon__item" onClick={((e) => filterBySalads(e))}>Salads</a>
-                        <a href="/" className="ribbon__item" onClick={((e) => filterBySoups(e))}>Soups</a>
-                        <a href="/" className="ribbon__item" onClick={((e) => filterByChiken(e))}>Chicken dishes</a>
-                        <a href="/" className="ribbon__item" onClick={((e) => filterByBeef(e))}>Beef dishes</a>
-                        <a href="/" className="ribbon__item" onClick={((e) => filterBySeafood(e))}>Seafood dishes</a>
+                        <a href="/" className="ribbon__item ribbon__item_active" onClick={(e) => {e.preventDefault(); getAllDishes(); getActiveClass(e)}}>All</a>
+                        <a href="/" className="ribbon__item" onClick={(e) => {filterBySalads(e); getActiveClass(e)}}>Salads</a>
+                        <a href="/" className="ribbon__item" onClick={(e) => {filterBySoups(e); getActiveClass(e)}}>Soups</a>
+                        <a href="/" className="ribbon__item" onClick={(e) => {filterByChiken(e); getActiveClass(e)}}>Chicken dishes</a>
+                        <a href="/" className="ribbon__item" onClick={(e) => {filterByBeef(e); getActiveClass(e)}}>Beef dishes</a>
+                        <a href="/" className="ribbon__item" onClick={(e) => {filterBySeafood(e); getActiveClass(e)}}>Seafood dishes</a>
                     </div>
 
                     <div id="center">
-                        <a href="/" className="ribbon__item" onClick={((e) => filterByChiken(e))}>Chicken dishes</a>
-                        <a href="/" className="ribbon__item" onClick={((e) => filterByBeef(e))}>Beef dishes</a>
-                        <a href="/" className="ribbon__item" onClick={((e) => filterBySeafood(e))}>Seafood dishes</a>
-                        <a href="/" className="ribbon__item" onClick={((e) => filterByVegetable(e))}>Vegetable dishes</a>
-                        <a href="/" className="ribbon__item" onClick={((e) => filterByBits(e))}>Bits and bites</a>
+                        <a href="/" className="ribbon__item" onClick={(e) => {filterByChiken(e); getActiveClass(e)}}>Chicken dishes</a>
+                        <a href="/" className="ribbon__item" onClick={(e) => {filterByBeef(e); getActiveClass(e)}}>Beef dishes</a>
+                        <a href="/" className="ribbon__item" onClick={(e) => {filterBySeafood(e); getActiveClass(e)}}>Seafood dishes</a>
+                        <a href="/" className="ribbon__item" onClick={(e) => {filterByVegetable(e); getActiveClass(e)}}>Vegetable dishes</a>
+                        <a href="/" className="ribbon__item" onClick={(e) => {filterByBits(e); getActiveClass(e)}}>Bits and bites</a>
                     </div>
 
                     <div>
-                        <a href="/" className="ribbon__item" onClick={((e) => filterByBeef(e))}>Beef dishes</a>
-                        <a href="/" className="ribbon__item" onClick={((e) => filterBySeafood(e))}>Seafood dishes</a>
-                        <a href="/" className="ribbon__item" onClick={((e) => filterByVegetable(e))}>Vegetable dishes</a>
-                        <a href="/" className="ribbon__item" onClick={((e) => filterByBits(e))}>Bits and bites</a>
-                        <a href="/" className="ribbon__item" onClick={((e) => filterByOther(e))}>On the side</a>
+                        <a href="/" className="ribbon__item" onClick={(e) => {filterByBeef(e); getActiveClass(e)}}>Beef dishes</a>
+                        <a href="/" className="ribbon__item" onClick={(e) => {filterBySeafood(e); getActiveClass(e)}}>Seafood dishes</a>
+                        <a href="/" className="ribbon__item" onClick={(e) => {filterByVegetable(e); getActiveClass(e)}}>Vegetable dishes</a>
+                        <a href="/" className="ribbon__item" onClick={(e) => {filterByBits(e); getActiveClass(e)}}>Bits and bites</a>
+                        <a href="/" className="ribbon__item" onClick={(e) => {filterByOther(e); getActiveClass(e)}}>On the side</a>
                     </div>
                 </Swiper>
             </nav>
