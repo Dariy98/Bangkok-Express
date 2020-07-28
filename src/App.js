@@ -10,85 +10,39 @@ import ModalCard from './components/ModalCart';
 function App() {
   const [cards, setCards] = useState([])
 
+  const getData = (e, param) => {
+    if(e !== null) { e.preventDefault() }
+    
+    fetch(`http://localhost:3000/${param}`)
+      .then(response => response.json())
+      .then(data => setCards(data));
+  }
+
   useEffect(() => {
-      fetch("http://localhost:3000/products")
-        .then(response => response.json())
-        .then(data => setCards(data));
+      getData(null, "products")
   }, []);
 
-  const filterBySalads = (e) => {
-    e.preventDefault()
-    fetch("http://localhost:3000/products?category=salads")
-        .then(response => response.json())
-        .then(data => setCards(data));
-  }
+  const filterBySalads = (e) => { getData(e, "products?category=salads") }
 
-  const filterBySoups = (e) => {
-    e.preventDefault()
-    fetch("http://localhost:3000/products?category=soups")
-        .then(response => response.json())
-        .then(data => setCards(data));
-  }
+  const filterBySoups = (e) => { getData(e, "products?category=soups") }
 
-  const filterByChiken = (e) => {
-    e.preventDefault()
-    fetch("http://localhost:3000/products?category=chicken-dishes")
-        .then(response => response.json())
-        .then(data => setCards(data));
-  }
+  const filterByChiken = (e) => { getData(e, "products?category=chicken-dishes") }
 
-  const filterByBeef = (e) => {
-    e.preventDefault()
-    fetch("http://localhost:3000/products?category=beef-dishes")
-        .then(response => response.json())
-        .then(data => setCards(data));
-  }
+  const filterByBeef = (e) =>  { getData(e, "products?category=beef-dishes") }
 
-  const filterBySeafood = (e) => {
-    e.preventDefault()
-    fetch("http://localhost:3000/products?category=seafood-dishes")
-        .then(response => response.json())
-        .then(data => setCards(data));
-  }
+  const filterBySeafood = (e) =>  { getData(e, "products?category=seafood-dishes") }
 
-  const filterByVegetable = (e) => {
-    e.preventDefault()
-    fetch("http://localhost:3000/products?category=vegetable-dishes")
-        .then(response => response.json())
-        .then(data => setCards(data));
-  }
+  const filterByVegetable = (e) =>  { getData(e, "products?category=vegetable-dishes") }
 
-  const filterByBits = (e) => {
-    e.preventDefault()
-    fetch("http://localhost:3000/products?category=bits-and-bites")
-        .then(response => response.json())
-        .then(data => setCards(data));
-  }
+  const filterByBits = (e) => { getData(e, "products?category=bits-and-bites") }
 
-  const filterByOther = (e) => {
-    e.preventDefault()
-    fetch("http://localhost:3000/products?category=on-the-side")
-        .then(response => response.json())
-        .then(data => setCards(data));
-  }
+  const filterByOther = (e) => { getData(e, "products?category=on-the-side") }
 
-  const filterByNuts = () => {
-    fetch("http://localhost:3000/products?nuts=true")
-        .then(response => response.json())
-        .then(data => setCards(data));
-  }
+  const filterByNuts = () => { getData(null, "products?nuts=true") }
 
-  const getAllDishes = () => {
-    fetch("http://localhost:3000/products")
-        .then(response => response.json())
-        .then(data => setCards(data));
-  }
+  const getAllDishes = () => { getData(null, "products") }
 
-  const filterByNotMeats = () => {
-    fetch("http://localhost:3000/products?vegeterian=true")
-        .then(response => response.json())
-        .then(data => setCards(data));
-  }
+  const filterByNotMeats = () => { getData(null, "products?vegeterian=true") }
 
   const [isOpenCart, setToggle] = useState(false);
 

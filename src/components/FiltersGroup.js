@@ -18,20 +18,32 @@ export default function Filters () {
         }
         else getAllDishes()
     }
+    const spicesValue = document.querySelector(".slider__value")
+    const progress = document.querySelector(".slider__progress")
+    const toggle = document.querySelector(".slider__thumb")
+    // const steps = document.querySelector(".slider__steps")
+    const steps = document.querySelectorAll(".slider__steps > span")
 
+    // steps.addEventListener("click", (e) => {
+    //     console.log(e.target)
+    // })
+    const onProgress = (e) => {
+        console.log(e.target)
+    }
+    console.log(spicesValue, progress, toggle, steps)
     return(
         <div className="filters">
             <div className="filters__group">
                 <label className="filters__label">Max spiciness</label>
-                <div className="filters__slider">
+                <div className="filters__slider" onClick={((e) => onProgress(e))}>
                 <div className="slider">
                     <div className="slider__thumb">
-                        <span className="slider__value">3</span>
+                        <span className="slider__value">0</span>
                     </div>
-                    <div className="slider__progress"></div>
+                    <div className="slider__progress" style={ {width: "0%"}}></div>
                     <div className="slider__steps">
-                        <span></span>
                         <span className="slider__step-active"></span>
+                        <span></span>
                         <span></span>
                         <span></span>
                         <span></span>
