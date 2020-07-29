@@ -1,10 +1,11 @@
 import React, {useState, useEffect} from 'react';
 import ReactDOM from 'react-dom';
+
+import { MyContext } from './context';
 import Header from './components/Header';
 import Main from './components/Main';
-import './App.css';
-import { MyContext } from './context';
 import ModalCard from './components/ModalCart';
+import './App.css';
 
 
 function App() {

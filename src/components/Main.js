@@ -1,4 +1,5 @@
 import React from "react";
+
 import Slider from './Slider';
 import CardsGrid from './CardGrid';
 import SliderDishes from './SliderDishes';

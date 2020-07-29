@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import Swiper from 'react-id-swiper';
 import 'swiper/swiper.scss';
+
 import { useProducts } from '../context';
 
 export default function SliderDishes () {
