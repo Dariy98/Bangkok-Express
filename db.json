@@ -8,7 +8,8 @@
           "id": "laab-kai-chicken-salad",
           "nuts": true,
           "vegeterian": false,
-          "spiciness": 2
+          "spiciness": 2,
+          "count": 1
         },
         {
           "name": "Som tam papaya salad",
@@ -18,7 +19,8 @@
           "id": "som-tam-papaya-salad",
           "nuts": false,
           "vegeterian": true,
-          "spiciness": 0
+          "spiciness": 0,
+          "count": 1
         },
         {
           "name": "Tom yam kai",
@@ -28,7 +30,8 @@
           "id": "tom-yam-kai",
           "nuts": false,
           "vegeterian": false,
-          "spiciness": 3
+          "spiciness": 3,
+          "count": 1
         },
         {
           "name": "Tom kha kai",
@@ -38,7 +41,8 @@
           "id": "tom-kha-kai",
           "nuts": false,
           "vegeterian": false,
-          "spiciness": 3
+          "spiciness": 3,
+          "count": 1
         },
         {
           "name": "Tom kha koong",
@@ -48,7 +52,8 @@
           "id": "tom-kha-koong",
           "nuts": false,
           "vegeterian": false,
-          "spiciness": 2
+          "spiciness": 2,
+          "count": 1
         },
         {
           "name": "Tom yam koong",
@@ -58,7 +63,8 @@
           "id": "tom-yam-koong",
           "nuts": false,
           "vegeterian": false,
-          "spiciness": 4
+          "spiciness": 4,
+          "count": 1
         },
         {
           "name": "Tom yam vegetarian",
@@ -68,7 +74,8 @@
           "id": "tom-yam-vegetarian",
           "nuts": false,
           "vegeterian": true,
-          "spiciness": 1
+          "spiciness": 1,
+          "count": 1
         },
         {
           "name": "Tom kha vegetarian",
@@ -78,7 +85,8 @@
           "id": "tom-kha-vegetarian",
           "nuts": false,
           "vegeterian": true,
-          "spiciness": 1
+          "spiciness": 1,
+          "count": 1
         },
         {
           "name": "Sweet 'n sour chicken",
@@ -88,7 +96,8 @@
           "id": "sweet-n-sour-chicken",
           "nuts": true,
           "vegeterian": false,
-          "spiciness": 2
+          "spiciness": 2,
+          "count": 1
         },
         {
           "name": "Chicken cashew",
@@ -98,7 +107,8 @@
           "id": "chicken-cashew",
           "nuts": true,
           "vegeterian": false,
-          "spiciness": 1
+          "spiciness": 1,
+          "count": 1
         },
         {
           "name": "Kai see ew",
@@ -108,7 +118,8 @@
           "id": "kai-see-ew",
           "nuts": false,
           "vegeterian": false,
-          "spiciness": 4
+          "spiciness": 4,
+          "count": 1
         },
         {
           "name": "Beef massaman",
@@ -118,7 +129,8 @@
           "id": "beef-massaman",
           "nuts": false,
           "vegeterian": false,
-          "spiciness": 2
+          "spiciness": 2,
+          "count": 1
         },
         {
           "name": "Seafood chu chee",
@@ -128,7 +140,8 @@
           "id": "seafood-chu-chee",
           "nuts": false,
           "vegeterian": false,
-          "spiciness": 2
+          "spiciness": 2,
+          "count": 1
         },
         {
           "name": "Penang shrimp",
@@ -138,7 +151,8 @@
           "id": "penang-shrimp",
           "nuts": true,
           "vegeterian": false,
-          "spiciness": 4
+          "spiciness": 4,
+          "count": 1
         },
         {
           "name": "Green curry veggies",
@@ -148,7 +162,8 @@
           "id": "green-curry-veggies",
           "nuts": true,
           "vegeterian": true,
-          "spiciness": 0
+          "spiciness": 0,
+          "count": 1
         },
         {
           "name": "Tofu cashew",
@@ -158,7 +173,8 @@
           "id": "tofu-cashew",
           "nuts": true,
           "vegeterian": true,
-          "spiciness": 0
+          "spiciness": 0,
+          "count": 1
         },
         {
           "name": "Red curry veggies",
@@ -168,7 +184,8 @@
           "id": "red-curry-veggies",
           "nuts": false,
           "vegeterian": true,
-          "spiciness": 4
+          "spiciness": 4,
+          "count": 1
         },
         {
           "name": "Krapau tofu",
@@ -178,7 +195,8 @@
           "id": "krapau-tofu",
           "nuts": false,
           "vegeterian": true,
-          "spiciness": 0
+          "spiciness": 0,
+          "count": 1
         },
         {
           "name": "Prawn crackers",
@@ -188,7 +206,8 @@
           "id": "prawn-crackers",
           "nuts": false,
           "vegeterian": false,
-          "spiciness": 1
+          "spiciness": 1,
+          "count": 1
         },
         {
           "name": "Fish cakes",
@@ -198,7 +217,8 @@
           "id": "fish-cakes",
           "nuts": false,
           "vegeterian": false,
-          "spiciness": 1
+          "spiciness": 1,
+          "count": 1
         },
         {
           "name": "Chicken satay",
@@ -208,7 +228,8 @@
           "id": "chicken-satay",
           "nuts": false,
           "vegeterian": false,
-          "spiciness": 1
+          "spiciness": 1,
+          "count": 1
         },
         {
           "name": "Satay sauce",
@@ -218,7 +239,8 @@
           "id": "satay-sauce",
           "nuts": false,
           "vegeterian": false,
-          "spiciness": 2
+          "spiciness": 2,
+          "count": 1
         },
         {
           "name": "Shrimp springrolls",
@@ -228,7 +250,8 @@
           "id": "shrimp-springrolls",
           "nuts": false,
           "vegeterian": false,
-          "spiciness": 3
+          "spiciness": 3,
+          "count": 1
         },
         {
           "name": "Mini vegetarian spring rolls",
@@ -238,7 +261,8 @@
           "id": "mini-vegetarian-spring-rolls",
           "nuts": false,
           "vegeterian": false,
-          "spiciness": 2
+          "spiciness": 2,
+          "count": 1
         },
         {
           "name": "Chicken springrolls",
@@ -248,7 +272,8 @@
           "id": "chicken-springrolls",
           "nuts": false,
           "vegeterian": false,
-          "spiciness": 2
+          "spiciness": 2,
+          "count": 1
         },
         {
           "name": "Thai fried rice",
@@ -258,7 +283,8 @@
           "id": "thai-fried-rice",
           "nuts": false,
           "vegeterian": false,
-          "spiciness": 2
+          "spiciness": 2,
+          "count": 1
         },
         {
           "name": "Prik nam pla",
@@ -268,7 +294,8 @@
           "id": "prik-nam-pla",
           "nuts": false,
           "vegeterian": false,
-          "spiciness": 4
+          "spiciness": 4,
+          "count": 1
         },
         {
           "name": "Fresh prawn crackers",
@@ -278,7 +305,8 @@
           "id": "fresh-prawn-crackers",
           "nuts": false,
           "vegeterian": false,
-          "spiciness": 1
+          "spiciness": 1,
+          "count": 1
         },
         {
           "name": "Stir fried vegetables",
@@ -288,7 +316,8 @@
           "id": "stir-fried-vegetables",
           "nuts": false,
           "vegeterian": true,
-          "spiciness": 0
+          "spiciness": 0,
+          "count": 1
         },
         {
           "name": "White rice",
@@ -298,7 +327,8 @@
           "id": "white-rice",
           "nuts": false,
           "vegeterian": true,
-          "spiciness": 0
+          "spiciness": 0,
+          "count": 1
         },
         {
           "name": "Fried noodles Thai style",
@@ -308,7 +338,8 @@
           "id": "fried-noodles-thai-style",
           "nuts": false,
           "vegeterian": true,
-          "spiciness": 2
+          "spiciness": 2,
+          "count": 1
         },
         {
           "name": "King salad",
@@ -318,7 +349,8 @@
           "id": "king-salad",
           "nuts": false,
           "vegeterian": true,
-          "spiciness": 2
+          "spiciness": 2,
+          "count": 1
         },
         {
           "name": "Satésaus",
@@ -328,7 +360,8 @@
           "id": "sat-saus",
           "nuts": false,
           "vegeterian": true,
-          "spiciness": 2
+          "spiciness": 2,
+          "count": 1
         }
       ]
   }

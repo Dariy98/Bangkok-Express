@@ -60,9 +60,9 @@ function App() {
 
     cart[0] ? cart[0].classList.add("shake") : console.log("no cart")
   }
-
+  
   const totalPrices = cartProducts.reduce((total, product) => {
-    return total + product.price
+      return total + (product.price * product.count)
   }, 0)
   
   return (
@@ -82,7 +82,8 @@ function App() {
               toggleCart,
               collectArrCart,
               cartProducts,
-              totalPrices
+              totalPrices,
+              setCart
             }}>
       <div className="App">
         <Header/>

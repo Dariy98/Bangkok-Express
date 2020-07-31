@@ -1,41 +1,41 @@
-import React, { useState } from "react";
+import React from "react";
+
 import { useProducts } from '../context';
 
 export default function DishInModal () {
 
-    const { cartProducts } = useProducts()
+    const { cartProducts, setCart } = useProducts()
     
-    //не получилось пока что сделать счётчик.
-    //идея была в том чтобы в корзине добавить продуктам 
-    //свойство count и с ним уже работать, но почему то 
-    //массив обновляется, и count обновляется, а страница нет.
-    const [ cart, setC] = useState(cartProducts)
-
-    const countClickPlus = (id) => {
-        cart.map(p=> {
-            if(p.id === id) {
-                return (p.count = p.count + 1)
+    const clickPlus = (id) => {
+        cartProducts.map(product => {
+            if(product.id === id) {
+                product.count = product.count + 1;
             }
-            return p
+            return product
         })
-        setC(cart)
-        console.log(cart)
+        setCart(cartProducts => [...cartProducts])
     }
     
-    const countClickMinus = (id) => {
-        cartProducts.map(p => {
-            if(p.id === id) {
-                return (p.count = p.count - 1)
+    const clickMinus = (id) => {
+        cartProducts.map(product => {
+            if(product.id === id) {
+                product.count = product.count - 1;
+                if(product.count === 0) { deleteDish(product.id) }
             }
-            return p
+            return product
         })
-        setC(cartProducts)
+        setCart(cartProducts => [...cartProducts])
+    }
+
+    const deleteDish = (id) => {
+        let updateArr = cartProducts.filter(product => id !== product.id);
+        setCart(cartProducts => [...updateArr])
+        console.log("delete", updateArr)
     }
 
     return(
         <div>
-            {cart.map(prod => {
-                cart.map(prod => {return prod.count = 1})
+            {cartProducts.map(prod => {
                 return(
                     <div className="cart-product" key={prod.id}>
                         <div className="cart-product__img">
@@ -47,7 +47,7 @@ export default function DishInModal () {
                                 <div className="cart-counter">
                                     <button type="button" 
                                             className="cart-counter__button cart-counter__button_minus" 
-                                            onClick={(() => countClickMinus(prod.id))}>
+                                            onClick={(() => clickMinus(prod.id))}>
                                         <img
                                             src={require("../icons/square-minus-icon.svg")}
                                             alt="minus"
@@ -56,7 +56,7 @@ export default function DishInModal () {
                                     <span className="cart-counter__count">{prod.count}</span>
                                     <button type="button" 
                                         className="cart-counter__button cart-counter__button_plus" 
-                                        onClick={(() => countClickPlus(prod.id))}>
+                                        onClick={() => clickPlus(prod.id)}>
                                             <img src={require("../icons/square-plus-icon.svg")} alt="plus" />
                                     </button>
                                 </div>

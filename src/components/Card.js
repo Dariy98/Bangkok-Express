@@ -1,4 +1,5 @@
 import React from "react";
+
 import { useProducts } from '../context';
 
 export default function Card () {
